@@ -70,10 +70,8 @@ btnRoll.addEventListener('click', function () {
             // add dice to score;
             if (dice !== 1) {
                   currentScore += dice;
-                  document.getElementById(`current--${activePlayer}`).textContent
-                        = currentScore;
+                  document.getElementById(`current--${activePlayer}`).textContent = currentScore;
 
-                  // current0El.innerHTML = currentScore;
             } else {
                   // switch to next player
                   switchPlayer();
@@ -107,40 +105,3 @@ document.querySelector('.btn--hold').addEventListener('click', () => {
 })
 
 btnNew.addEventListener('click', init)
-
-// let score = 0;  ---forEach----
-// document.querySelectorAll('.score').forEach(skor => {
-//     skor.innerHTML = score;
-// })
-
-
-
-// btnRoll.addEventListener('click', function () {
-//       //1.Generate a random dice roll  
-//       const dice = Math.trunc(Math.random() * 6) + 1;
-//       //2.Display dice
-//       diceEl.classList.remove('hidden');
-//       diceEl.src = `dice-${dice}.png`
-//       console.log(dice);
-//       //3.Check for rolled 1: if true,
-//       if (dice !== 1) {
-//             if (player1.classList.contains('player--active')) {
-//                   currentScore += dice;
-//                   current0El.textContent = currentScore;
-//                   // add cuurent score to score;
-//             } else if (player2.classList.contains('player--active')) {
-//                   currentScore2 += dice;
-//                   current1El.textContent = currentScore2;
-//                   // add cuurent score to score;
-//             }
-//       } else {
-//             // switch to next player
-//             if (player1.classList.contains('player--active')) {
-//                   player1.classList.remove('player--active');
-//                   player2.classList.add('player--active');
-//             } else if (player2.classList.contains('player--active')) {
-//                   player1.classList.add('player--active');
-//                   player2.classList.remove('player--active');
-//             }
-//       }
-// })

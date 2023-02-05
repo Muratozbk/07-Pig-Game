@@ -127,6 +127,33 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
+.btn--info {
+  transform: scale(.7);
+  align-content: center;
+  left: 90%;
+  background-color: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  opacity: .7;
+  transition: all .3s;
+}
+
+.info-text {
+  /* display: none; */
+  width: 85%;
+  line-height: 3rem;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.91);
+  padding: 2rem 3rem;
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 33%;
+  transform: translate(-50%);
+  transition: all .4s;
+  cursor: pointer;
+}
+
 .btn::first-letter {
   font-size: 2.4rem;
   display: inline-block;
@@ -144,6 +171,8 @@ main {
 .btn--hold {
   top: 46.1rem;
 }
+
+
 
 .btn:active {
   transform: translate(-50%, 3px);

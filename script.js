@@ -15,10 +15,10 @@ roll dice = 1.roll random dice number  ,
 //Selecting elements
 const score0El = document.getElementById('score--0');
 const score1El = document.getElementById('score--1');
-const diceEl = document.querySelector('.dice');
 const current0El = document.getElementById('current--0');
 const current1El = document.getElementById('current--1');
 
+const diceEl = document.querySelector('.dice');
 const btnRoll = document.querySelector('.btn--roll');
 const btnNew = document.querySelector('.btn--new');
 const btnHold = document.querySelector('.btn--hold');
@@ -102,6 +102,20 @@ document.querySelector('.btn--hold').addEventListener('click', () => {
                   switchPlayer();
             }
       }
-})
+});
 
 btnNew.addEventListener('click', init)
+
+document.querySelector('.btn--info').addEventListener('click', () => {
+      document.querySelector('.info-text').classList.toggle('hidden')
+});
+
+document.querySelectorAll('.player').forEach(players => {
+      players.addEventListener('click', function () {
+            document.querySelector('.info-text').classList.add('hidden')
+      })
+})
+
+document.querySelector('.info-text').addEventListener('click', () => {
+      document.querySelector('.info-text').classList.add('hidden')
+});
